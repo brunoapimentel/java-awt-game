@@ -17,6 +17,11 @@ public class GameEngine extends Frame {
     int width;
     int height;
 
+    public GameEngine(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
     public GameEngine(int width, int height, Image backgroundImage) {
         this.width = width;
         this.height = height;
@@ -53,7 +58,9 @@ public class GameEngine extends Frame {
 
     @Override
     public void paint(Graphics g) {
-        g.drawImage(backgroundImage, 0, 0, null);
+        if(backgroundImage != null) {
+            g.drawImage(backgroundImage, 0, 0, null);
+        }
 
         for (GameObject object : objects) {
             object.paint(g);

@@ -3,7 +3,7 @@ package engine;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public abstract class GameObject {
+public class GameObject {
     private Image image;
     protected int x;
     protected int y;
